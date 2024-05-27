@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux'
 function App() {
 
 const dataGet=useSelector((storeData)=>storeData?.skill);
-console.log(dataGet);
+
 
 
   return (

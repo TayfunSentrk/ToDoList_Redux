@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from "./Item.module.css"
 import { useDispatch } from 'react-redux'
-import { skillRemoveById } from '../../redux/actions/skillAction';
+import { skillRemoveById, skillSelect } from '../../redux/actions/skillAction';
+
 const ListItem = ({item}) => {
 const dispatch=useDispatch();
 
@@ -11,7 +12,7 @@ const dispatch=useDispatch();
     <h4>{item.score}</h4>
     <div className={styles.buttonDiv}>
         <button className={styles.delete} onClick={()=>dispatch(skillRemoveById(item.id))}>Sil</button>
-        <button className={styles.update}>Düzenle</button>
+        <button className={styles.update} onClick={()=>dispatch(skillSelect(item.id))}>Düzenle</button>
     </div>
 </div>
   )

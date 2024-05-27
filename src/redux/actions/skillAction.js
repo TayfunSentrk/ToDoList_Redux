@@ -1,4 +1,4 @@
-import { SKILL_AD, SKILL_REMOVE_ALL, SKILL_REMOVE_BY_ID, SKILL_UPDATE } from "./skillActionTypes";
+import { SKILL_AD, SKILL_REMOVE_ALL, SKILL_REMOVE_BY_ID, SKILL_SELECT, SKILL_UPDATE } from "./skillActionTypes";
 
 export const skillAd=(skill)=>{
     return {
@@ -19,8 +19,15 @@ export const skillRemoveById=(id)=>{
     }
 }
 
-const skillUpdate=(skill)=>{
+export const skillUpdate=(skill)=>{
     return {
-        type:skillUpdate,payload:skill
+        type:SKILL_UPDATE,payload:skill
     }
 }
+
+export const skillSelect=(id)=>{
+    return{
+        type:SKILL_SELECT,payload:id
+    }
+}
+

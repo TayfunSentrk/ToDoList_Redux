@@ -1,19 +1,35 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Form.module.css"
-import { useDispatch } from 'react-redux';
-import { skillAd } from '../../redux/actions/skillAction';
+import { useDispatch, useSelector } from 'react-redux';
+import { skillAd, skillUpdate } from '../../redux/actions/skillAction';
 
 
 const Form = () => {
-
+    const skill=useSelector((store)=>store.updateSkill)
+ 
     const [name,setName]=useState("");
     const [score,setScore]=useState("");
     const dispatch=useDispatch();
 
+    useEffect(()=>{
+        setName(skill.name);
+        setScore(skill.score);
+
+    },[skill])
+
+
     const submit=(e)=>{
         e.preventDefault();
         if(!name || !score) return;
-        dispatch(skillAd({name,score}))
+        if(skill.name!=="" && skill.score!==""){
+            dispatch(skillUpdate({name,score,id:skill.id}))
+        }
+
+        else{
+            dispatch(skillAd({name,score}))
+        }
+
+      
         setName("");
         setScore("");
 
@@ -29,7 +45,7 @@ const Form = () => {
             </div>
 
             <div>
-                <button type='submit'>Lütfen Onaylayınız</button>
+                <button type='submit'>{skill.name!==""?"Güncelleyiniz":"Ekleyiniz"}</button>
             </div>
         </form>
     </div>
