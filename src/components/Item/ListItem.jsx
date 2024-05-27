@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from "./Item.module.css"
-const ListItem = () => {
+const ListItem = ({item}) => {
   return (
-    <div className='container'>
+    <div className={styles.container}>
     <h3>{item.name}</h3>
     <h4>{item.score}</h4>
-    <div className='buttonDiv'>
-        <button>Sil</button>
-        <button>Düzenle</button>
+    <div className={styles.buttonDiv}>
+        <button className={styles.delete}>Sil</button>
+        <button className={styles.update}>Düzenle</button>
     </div>
 </div>
   )

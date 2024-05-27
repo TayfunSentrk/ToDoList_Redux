@@ -4,6 +4,6 @@ import { skillReducer } from "../reducer/skillReducer"
 import { composeWithDevTools } from "@redux-devtools/extension"
 
 
- const store=createStore(skillReducer,composeWithDevTools)
+ const store=createStore(skillReducer,composeWithDevTools())
 
  export default store

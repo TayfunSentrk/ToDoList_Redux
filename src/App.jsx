@@ -5,17 +5,19 @@ import './App.css'
 import Header from './components/Header/Header'
 import List from './components/List/List'
 import Form from './components/Form/Form'
+import { useSelector } from 'react-redux'
 
 function App() {
 
+const dataGet=useSelector((storeData)=>storeData?.skill);
+console.log(dataGet);
 
-  const [data,setData]=useState([]);
 
   return (
     <div className='container'>
     <Header/>
     <Form/>
-        {data.length>0 && <List data={data}/>}  
+        {dataGet?.length>0 && <List dataGet={dataGet}/>}  
     </div>
   )
 }

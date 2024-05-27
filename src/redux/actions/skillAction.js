@@ -2,7 +2,7 @@ import { SKILL_AD, SKILL_REMOVE_ALL, SKILL_REMOVE_BY_ID, SKILL_UPDATE } from "./
 
 export const skillAd=(skill)=>{
     return {
-        type:skillAd,payload:skill
+        type:SKILL_AD,payload:skill
     }
 }
 

@@ -22,7 +22,7 @@ const Form = () => {
     <div className={styles.container}>
 
 
-        <form action={submit} >
+        <form onSubmit={submit} >
             <div>
                 <input type="text" value={name} onChange={(e)=>setName(e.target.value)}  placeholder='Yetkinlik İsmini Giriniz'/>
                 <input type='number' value={score} onChange={(e)=>setScore(e.target.value)} max={10} min={1} placeholder='Lüften puanınızı giriniz'/>

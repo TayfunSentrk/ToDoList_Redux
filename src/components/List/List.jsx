@@ -2,11 +2,11 @@ import React from 'react'
 import styles from "./List.module.css"
 import ListItem from '../Item/ListItem'
 
-const List = ({data}) => {
+const List = ({dataGet}) => {
   return (
-    <div className='container'>
+    <div className={styles.container}>
           {
-            data.map((item)=><ListItem key={item.id} item={item}/>)
+            dataGet.map((item)=><ListItem key={item.id} item={item}/>)
           }
 
             

@@ -3,7 +3,7 @@ import { SKILL_AD, SKILL_REMOVE_ALL, SKILL_REMOVE_BY_ID, SKILL_UPDATE } from "..
 
 
 const initialSkillState={
-    skill=[];
+    skill:[]
 }
 
 
@@ -13,6 +13,7 @@ export const skillReducer=(state=initialSkillState,action)=>{
 
             case SKILL_AD:
                 const newItem={id:Date.now(),name:action.payload.name,score:action.payload.score}
+              
                 return {...state,skill:[...state.skill,newItem]}
 
             case SKILL_REMOVE_ALL:
@@ -26,6 +27,7 @@ export const skillReducer=(state=initialSkillState,action)=>{
                 return {...state,skill:newListSkill}
 
             case SKILL_UPDATE:
-                const newListSkill=state.skill.map((item)=>item.id===action.payload.id?action.payload:item)
+                // const newListSkill=state.skill.map((item)=>item.id===action.payload.id?action.payload:item)
+                return state
         }
 }
