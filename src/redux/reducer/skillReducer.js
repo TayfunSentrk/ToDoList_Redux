@@ -22,7 +22,10 @@ const skillReducer=(state=initialSkillState,action)=>{
 
             case SKILL_REMOVE_BY_ID:
 
-                const newListSkill=state.skill.filter((item)=>item.id!=action.payload)
+                const newListSkill=state.skill.filter((item)=>item.id!==action.payload)
                 return {...state,skill:newListSkill}
+
+            case SKILL_UPDATE:
+                const newListSkill=state.skill.map((item)=>item.id===action.payload.id?action.payload:item)
         }
 }

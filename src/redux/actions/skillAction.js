@@ -19,8 +19,8 @@ const skillRemoveById=(id)=>{
     }
 }
 
-const skillUpdate=(id)=>{
+const skillUpdate=(skill)=>{
     return {
-        type:skillUpdate,payload:id
+        type:skillUpdate,payload:skill
     }
 }
