@@ -7,7 +7,7 @@ const initialSkillState={
 }
 
 
-const skillReducer=(state=initialSkillState,action)=>{
+export const skillReducer=(state=initialSkillState,action)=>{
         switch(action.type){
             
 
