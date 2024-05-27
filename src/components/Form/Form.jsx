@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./Form.module.css"
 const Form = () => {
+
+    const [name,setName]=useState("");
+    const [score,setScore]=useState("");
   return (
     <div className='container'>
-        <form action="">
+
+
+        <form action="" >
             <div>
-                <input type="text"  placeholder='Yetkinlik İsmini Giriniz'/>
-                <input type='text' max={10} min={1} placeholder='Lüften puanınızı giriniz'/>
+                <input type="text" value={name} onChange={(e)=>setName(e.target.value)}  placeholder='Yetkinlik İsmini Giriniz'/>
+                <input type='number' value={score} onChange={(e)=>setScore(e.target.value)} max={10} min={1} placeholder='Lüften puanınızı giriniz'/>
             </div>
 
             <div>
