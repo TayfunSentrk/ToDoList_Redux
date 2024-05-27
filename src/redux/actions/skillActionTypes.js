@@ -1,0 +1,9 @@
+
+
+export const SKILL_AD="SKILL_AD";
+
+export const SKILL_REMOVE_BY_ID="SKILL_REMOVE_BY_ID"
+
+export const SKILL_REMOVE_ALL="SKILL_REMOVE_ALL";
+
+export const SKILL_UPDATE="SKILL_UPDATE";
