@@ -15,7 +15,7 @@ export const skillRemoveAll=()=>{
 
 export const skillRemoveById=(id)=>{
     return {
-        type:skillRemoveById,payload:id
+        type:SKILL_REMOVE_BY_ID,payload:id
     }
 }
 
