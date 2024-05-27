@@ -1,19 +1,19 @@
 import { SKILL_AD, SKILL_REMOVE_ALL, SKILL_REMOVE_BY_ID, SKILL_UPDATE } from "./skillActionTypes";
 
-const skillAd=(skill)=>{
+export const skillAd=(skill)=>{
     return {
         type:skillAd,payload:skill
     }
 }
 
 
-const skillRemoveAll=()=>{
+export const skillRemoveAll=()=>{
     return {
         type:skillRemoveAll
     }
 }
 
-const skillRemoveById=(id)=>{
+export const skillRemoveById=(id)=>{
     return {
         type:skillRemoveById,payload:id
     }
